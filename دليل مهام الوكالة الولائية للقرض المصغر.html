@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دليل مهام الوكالة الولائية للقرض المصغر</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF4FA;--card:#fff;--ink:#12283D;--mut:#5A6F85;--blue:#1F5F99;--blue2:#0F3A5F;--ice:#DCEAF7;--or:#F27A1A;--or2:#FFF0E2;--line:#C9DAEA;--r:14px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1A28;--card:#132A40;--ink:#E8F1F9;--mut:#9DB4CA;--blue:#6FB0EA;--blue2:#07121D;--ice:#1B3A57;--or:#FF9042;--or2:#3A2414;--line:#264A68}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,"Segoe UI",sans-serif;line-height:1.8}
+header{background:linear-gradient(135deg,var(--blue2),var(--blue));color:#fff;padding:22px 18px 0;border-bottom:5px solid var(--or)}
+.wrap{max-width:1000px;margin:auto}
+h1{margin:0;font-size:clamp(1.3rem,4vw,2rem);font-weight:800}
+header p{margin:4px 0 14px;color:#cfe3f5;font-size:.95rem}
+nav{display:flex;gap:6px;overflow-x:auto}
+nav button{font:inherit;font-weight:600;border:0;background:rgba(255,255,255,.12);color:#fff;padding:9px 18px;border-radius:12px 12px 0 0;cursor:pointer;white-space:nowrap}
+nav button[aria-selected=true]{background:var(--bg);color:var(--or)}
+main{max-width:1000px;margin:auto;padding:20px 16px 60px}
+section{display:none}section.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.role{cursor:pointer;border-top:4px solid var(--blue);text-align:right;font:inherit;color:inherit;width:100%}
+.role:hover,.role:focus-visible{border-top-color:var(--or);outline:2px solid var(--or)}
+.role b{display:block;font-size:1.02rem}.role small{color:var(--mut)}
+input[type=search]{width:100%;font:inherit;padding:12px 16px;border:2px solid var(--line);border-radius:var(--r);background:var(--card);color:var(--ink);margin-bottom:16px}
+input[type=search]:focus{border-color:var(--or);outline:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{font:inherit;border:1.5px solid var(--blue);background:var(--card);color:var(--blue);border-radius:99px;padding:4px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--or);border-color:var(--or);color:#fff;font-weight:600}
+h2{color:var(--blue);margin:0 0 6px;font-size:1.35rem}
+h3{margin:18px 0 8px;font-size:1.05rem;color:var(--or)}
+.sub{color:var(--mut);margin:0 0 14px}
+.bar{height:10px;background:var(--ice);border-radius:9px;overflow:hidden;margin:6px 0 16px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--or),#FFB26B);transition:width .3s}
+.item{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border-radius:10px;background:var(--card);border:1px solid var(--line);margin-bottom:7px;cursor:pointer}
+.item input{accent-color:var(--or);width:19px;height:19px;margin-top:6px;flex:none}
+.item:has(input:checked){background:var(--or2);border-color:var(--or)}
+.item:has(input:checked) span{color:var(--mut);text-decoration:line-through}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.btn{font:inherit;border:0;border-radius:10px;padding:8px 16px;cursor:pointer;background:var(--blue);color:#fff;font-weight:600}
+.btn.o{background:var(--or)}.btn.g{background:var(--ice);color:var(--blue)}
+.flow{position:relative;padding-right:30px}
+.flow:before{content:"";position:absolute;right:11px;top:8px;bottom:8px;width:3px;background:var(--line)}
+.step{position:relative;margin-bottom:12px}
+.step:before{content:"";position:absolute;right:-26px;top:16px;width:15px;height:15px;border-radius:50%;background:var(--or);border:3px solid var(--bg)}
+.step:nth-child(even):before{background:var(--blue)}
+.tag{display:inline-block;font-size:.8rem;background:var(--ice);color:var(--blue);border-radius:6px;padding:0 8px;margin-left:6px}
+.empty{color:var(--mut);padding:20px;text-align:center}
+:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+@media print{header nav,.tools,input[type=search]{display:none}section{display:block!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>الوكالة الوطنية لتسيير القرض المصغر — الوكالة الولائية</h1>
+<p>دليل تفاعلي لمهام العاملين، ملفات كل حالة، ومسار التسليم</p>
+<nav role="tablist" id="nav"></nav>
+</div></header>
+<main>
+<section id="home">
+<input type="search" id="q" placeholder="ابحث عن مهمة أو وثيقة أو منصب…" aria-label="بحث">
+<div id="results"></div>
+<div id="roles">
+<h2>اختر منصبك</h2><p class="sub">اضغط على أي منصب لعرض مهامه مع قائمة متابعة.</p>
+<div class="grid" id="rolegrid"></div></div>
+</section>
+<section id="tasks">
+<h2>المهام حسب المنصب</h2><p class="sub">علّم ما أنجزته، يُحفظ تقدمك على هذا الجهاز.</p>
+<div class="chips" id="rolechips"></div>
+<div id="roleview"></div>
+</section>
+<section id="files">
+<h2>ملفات كل حالة</h2><p class="sub">قائمة الوثائق المطلوبة، وفق القائمة الرسمية الخاصة بكل صيغة تمويل.</p>
+<div class="chips" id="casechips"></div>
+<div id="caseview"></div>
+</section>
+<section id="flow">
+<h2>مسار التنسيق وتسليم الملفات</h2>
+<p class="sub">كل تحويل يُسجَّل بتاريخ التحويل، الجهة المستلمة، الوثائق المرفقة ووضعية الملف.</p>
+<div class="flow" id="flowview"></div>
+<div class="card"><b>أحكام عامة:</b> تُنفَّذ المهام وفق النصوص والإجراءات الرسمية والتعليمات الصادرة عن المديرية العامة والفرع الجهوي. على كل موظف توثيق عملياته، الحفاظ على سرية المعلومات، وإشعار المسؤول المباشر بأي نقص أو إشكال. هذه الوثيقة ليست بديلاً عن النصوص الرسمية أو تفويضات الإمضاء.</div>
+</section>
+</main>
+<script>
+const ROLES=[
+["director","مدير الوكالة الولائية",["الإشراف العام وضمان التنسيق بين المصالح والموظفين","إعداد أهداف الوكالة وخطة العمل ومتابعة تنفيذها وتقييم النتائج دورياً","تنفيذ تعليمات المديرية العامة والتنسيق مع الفرع الجهوي","معالجة الإشكالات التي تتجاوز صلاحيات المصالح","تنظيم الاجتماعات الدورية وتحديد القرارات والتكليفات ومتابعتها","تمثيل الوكالة أمام الهيئات والشركاء","متابعة المؤشرات والتقارير (النشاط المالي وغير المالي والتحصيل)"]],
+["secretary","الأمانة العامة / السكرتارية",["استلام البريد الوارد وتسجيله وتوزيعه على المصالح","تسجيل البريد الصادر وترقيمه وحفظ نسخه ومرفقاته","تنظيم وحفظ المراسلات والوثائق الإدارية","تبليغ التعليمات بين المدير والمصالح ومتابعة إجراءاتها","ضبط المواعيد والاجتماعات وإعداد ملفاتها"]],
+["acc1","المرافق — استقبال ودراسة الملفات",["استقبال طالبي القرض وتوجيههم وإعلامهم بالشروط والخدمات","تسجيل المواعيد والطلبات على المنصة الرقمية ومتابعتها","استلام الملفات والتحقق من اكتمال الوثائق وإعلام المعني بالنقائص","إعداد الدراسة التقنية والاقتصادية بدقة","إجراء التحقيقات والزيارات الميدانية وتحرير التقارير","إحالة الملفات المستوفية إلى المرافق الرئيسي ومتابعة مآلها","المشاركة في لجان التأهيل والتمويل عند الاستدعاء"]],
+["acc2","المرافق — شراء المواد الأولية",["تحضير ملف طالب التمويل وإحالته إلى المرافق الرئيسي","التأكد من توفر الوثائق المطلوبة في القائمة الرسمية","بعد الموافقة: التنسيق مع المكلف بالتحصيل لاستدعاء المستفيد","إعداد دفتر الشروط وشرح الالتزامات قبل التوقيع","التأكد من الإمضاء والختم والبصمة والمصادقة","متابعة توقيع سند الأمر (Billet à ordre)","عند الإلغاء: استلام الطلب والتصريح الشرفي وإعداد تقرير الوضعية"]],
+["acc3","المرافق — اقتناء العتاد",["إعداد ملف التمويل وإحالته إلى البنك مع التحقق من الوثائق","متابعة مآل الملف البنكي وإعلام المستفيد","توجيه المستفيد لإجراءات صندوق ضمان القروض","تجميع الملف بعد توقيع العقد وإحالته للمرافق الرئيسي","استدعاء المستفيد لاستكمال دفتر الشروط وسند الأمر","زيارة المورد وإعداد محضرها ومتابعة شهادة توفر العتاد والدفع 10%","استكمال وثائق التسليم: المقررات، محضر المعاينة والتثبيت، مقرر الاستغلال","متابعة وثائق الدفع 90% والرهن والتأمين ومحضر بداية النشاط والإعفاءات الجبائية","عند الإلغاء: استلام الوثائق المطلوبة وإعداد تقرير الوضعية"]],
+["acc4","المرافق — التحصيل والتحسيس",["إعداد رسائل التذكير الأولى والثانية وإحالتها لمصلحة التحصيل","المشاركة في خرجات التحصيل وتوثيق نتائجها","تقييد الرسائل والعمليات في السجلات المخصصة","مساندة المكلف بالإعلام والاتصال في الأنشطة التحسيسية"]],
+["chief","المرافق الرئيسي",["توزيع المهام والملفات على المرافقين ومتابعة تقدمها","التنسيق بين المدير والمرافقين والمصالح","استلام الملفات المحالة ومراجعة اكتمالها قبل التحويل","تنظيم تحويل الملفات وطلبات الإلغاء وتسجيلها","إعداد قوائم الملفات والقائمة النهائية للجنة التأهيل والتمويل","التنسيق مع المكلف بالتمويل لضمان تطابق القوائم والسجلات","متابعة تسجيل المحاضر والشهادات وأوامر الدفع 10% و90% والمقررات","إعداد إحصائيات وتقارير خلية المرافقة واقتراح التدابير التصحيحية"]],
+["fin","المكلف بالتمويل",["إعداد شهادات التأهيل والتمويل (المواد الأولية) وإحالتها","إعداد وثائق إلغاء الشهادة وتوجيه النسخ للمصالح","إعداد قوائم طلبات التمويل بعد التحقق من الإجراءات","إعداد طلبات استرجاع الأموال من الحسابات البنكية","متابعة حركة أموال الصناديق الخاصة بالوكالة وتوثيقها"]],
+["acct","المكلف بالمحاسبة",["مطابقة الأرصدة بين الحسابات البنكية والجرد الأسبوعي","تسيير برنامج IMMO وإدخال البيانات المحاسبية","تسيير صندوق التسيير وإثبات العمليات","متابعة الحسابات غير المعرفة وتسويتها","إعداد الوضعيات والتقارير المحاسبية في آجالها"]],
+["com","المكلف بالإعلام والاتصال",["إعداد مخطط شهري للأنشطة الإعلامية والتحسيسية","التعريف بخدمات الوكالة لدى الهيئات ومراكز التكوين والفضاءات المعنية","تنظيم أو المشاركة في المعارض والتظاهرات","توثيق الأنشطة وفق قواعد حماية المعطيات والصور","إعداد التقارير والإحصائيات (شهرية، ثلاثية، سداسية، سنوية)","استقبال طالبي المعلومات وتوجيههم","إعداد برنامج الخرجات التحسيسية وتقييمه"]],
+["coll","المكلف بالتحصيل",["تنفيذ خرجات التحصيل وتوثيق نتائجها","متابعة رسائل التذكير وإعداد رسائل الإعذار","إعداد الوضعية اليومية والأسبوعية للتحصيل","تسجيل وصول التسديد وإحالته للتقني السامي","إعداد إحصائيات التحصيل ونسب الاسترجاع والملفات المتأخرة","متابعة الدفع عن بعد","دراسة مقترحات إعادة الجدولة للمتخلفين وإحالتها للمصادقة"]],
+["tech","التقني السامي",["إجراء التحقيقات والتحققات وتوثيق نتائجها","إدخال بيانات ملفات طالبي القروض بدقة والتحقق من اتساقها","تسجيل وصول تسديد القروض بعد استلام الوثائق المؤيدة","إدخال بيانات شهادات التأهيل والتمويل والإلغاء وتحيين الوضعيات","حماية سلامة قاعدة البيانات وتنبيه المسؤول للأخطاء والتكرار","استخراج الإحصائيات والوضعيات المطلوبة"]],
+["train","المكلف بالتكوين والتنشيط",["إعداد برنامج الدورات التكوينية","استدعاء المستفيدين وإبلاغهم بالمواعيد والشروط","تنظيم الدورات ومتابعة الحضور والوثائق","إعداد تقارير الدورات (عدد المشاركين، النتائج، الملاحظات)"]]
+];
+const CASES=[
+["raw","شراء المواد الأولية",[["قبل عرض الملف (بعد الدراسة)",["نسخة بطاقة التعريف","نسخة بطاقة الحرفي أو السجل التجاري أو بطاقة الفلاح (حسب الحالة)","بطاقة الانخراط للسنة الجارية","كشف الهوية البنكية أو البريدية (RIB/RIP)"]],["بعد الموافقة على التمويل",["استدعاء المستفيد بالتنسيق مع المكلف بالتحصيل","دفتر الشروط والاستدعاء مع شرح الالتزامات","الإمضاء والختم والبصمة والمصادقة القانونية","سند الأمر (Billet à ordre)"]]]],
+["bank","اقتناء العتاد — الإحالة إلى البنك",[["ملف البنك",["الطلب الخطي","شهادة التأهيل والتمويل","الدراسة التقنية والاقتصادية","نسخة بطاقة التعريف","شهادة الإقامة","شهادة الميلاد","وثائق عدم الانتساب إلى CNAS/CASNOS","الفاتورة الشكلية","كشف التأمين"]]]],
+["equip","اقتناء العتاد — بعد الموافقة البنكية",[["ملف طلب التمويل (بعد توقيع العقد)",["شهادة التأهيل والتمويل","نسخة بطاقة التعريف","محضر لجنة التأهيل والتمويل","وصل فتح الحساب البنكي","وصل تسديد النسبة المقررة","RIB","وصل تسديد التزامات صندوق الضمان","وثائق النشاط (سجل تجاري / بطاقة حرفي / بطاقة فلاح)","NIF","عقد كراء ساري المفعول"]],["الدفع 10%",["دفتر الشروط والوثائق التعاقدية وسند الأمر","محضر زيارة المورد","شهادة توفر العتاد"]],["بعد التسليم والدفع 90%",["مقررات الاستفادة من الاستثمار","محضر معاينة العتاد وتثبيته","مقرر الاستغلال","ما يثبت استلام المورد للمبالغ","شهادة رهن العتاد","وثائق التأمين","محضر بداية النشاط","مقررات الإعفاءات الجبائية (إحالتها لمصلحة الضرائب)"]]]],
+["cancel","طلب إلغاء الملف",[["المواد الأولية",["طلب الإلغاء","التصريح الشرفي المصادق أو المختوم من البلدية","تقرير عن وضعية الملف → المرافق الرئيسي"]],["اقتناء العتاد",["طلب الإلغاء","التصريح الشرفي","كشف الحساب البنكي","وثائق أخرى حسب الحالة","تقرير عن وضعية الملف → المرافق الرئيسي"]]]],
+["recov","التحصيل والإعذار",[["السلسلة",["رسالة التذكير الأولى (المرافق)","رسالة التذكير الثانية (المرافق)","رسالة الإعذار (المكلف بالتحصيل)","وصل التسديد والوثائق الثبوتية → التقني السامي","مقترح إعادة الجدولة للمصادقة (عند الحاجة)"]]]]
+];
+const FLOW=[
+["المرافق","يستقبل الطلب، يتحقق من الوثائق، ينجز الدراسة والتحقيقات، ثم يحيل الملف إلى المرافق الرئيسي."],
+["المرافق الرئيسي","يسجل الإحالة ويراجع الملف، ثم يوجهه إلى التقني السامي أو المصلحة المختصة."],
+["التقني السامي","يتولى التسجيلات والتحققات التقنية وقاعدة البيانات، ويبلغ عن أي نقص أو تعارض."],
+["المكلف بالتمويل","يتولى الوثائق والعمليات المالية بناءً على الملفات المحالة رسمياً."],
+["لجنة التأهيل والتمويل","بعد القرارات والموافقات، يستكمل المرافق الإجراءات مع المستفيد ويتابع الوثائق اللاحقة حتى إتمام المسار."]
+];
+const $=s=>document.querySelector(s);
+let store={};try{store=JSON.parse(localStorage.getItem("angem")||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem("angem",JSON.stringify(store))}catch(e){}};
+const TABS=[["home","الرئيسية"],["tasks","المهام"],["files","ملفات الحالات"],["flow","مسار التسليم"]];
+let curRole=ROLES[0][0],curCase=CASES[0][0];
+function show(id){if(!TABS.some(t=>t[0]===id))id="home";document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id===id));
+document.querySelectorAll("#nav button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===id));try{history.replaceState(null,"","#"+id)}catch(e){}}
+$("#nav").innerHTML=TABS.map(t=>`<button role="tab" data-t="${t[0]}">${t[1]}</button>`).join("");
+$("#nav").onclick=e=>{if(e.target.dataset.t)show(e.target.dataset.t)};
+$("#rolegrid").innerHTML=ROLES.map(r=>`<button class="card role" data-r="${r[0]}"><b>${r[1]}</b><small>${r[2].length} مهام</small></button>`).join("");
+$("#rolegrid").onclick=e=>{const b=e.target.closest("[data-r]");if(b){curRole=b.dataset.r;drawRoles();show("tasks")}};
+function chips(el,list,cur,attr){el.innerHTML=list.map(x=>`<button class="chip" ${attr}="${x[0]}" aria-pressed="${x[0]===cur}">${x[1]}</button>`).join("")}
+function list(prefix,items){return items.map((t,i)=>{const k=prefix+"-"+i;return `<label class="item"><input type="checkbox" data-k="${k}" ${store[k]?"checked":""}><span>${t}</span></label>`}).join("")}
+function prog(keys){const n=keys.filter(k=>store[k]).length;return `<div class="bar"><i style="width:${keys.length?n*100/keys.length:0}%"></i></div><small class="sub">${n} من ${keys.length} منجز</small>`}
+function drawRoles(){chips($("#rolechips"),ROLES,curRole,"data-r");const r=ROLES.find(x=>x[0]===curRole);
+$("#roleview").innerHTML=`<h3 style="margin-top:0">${r[1]}</h3>`+prog(r[2].map((_,i)=>curRole+"-"+i))+list(curRole,r[2])+tools(curRole)}
+function drawCases(){chips($("#casechips"),CASES,curCase,"data-c");const c=CASES.find(x=>x[0]===curCase);let keys=[],h="";
+c[2].forEach((g,gi)=>{const p=curCase+gi;g[1].forEach((_,i)=>keys.push(p+"-"+i));h+=`<h3>${g[0]}</h3>`+list(p,g[1])});
+$("#caseview").innerHTML=`<h3 style="margin-top:0;color:var(--blue)">${c[1]}</h3>`+prog(keys)+h+tools(curCase)}
+function tools(p){return `<div class="tools"><button class="btn g" data-reset="${p}">إعادة التعيين</button><button class="btn o" onclick="print()">طباعة</button></div>`}
+document.addEventListener("change",e=>{const k=e.target.dataset&&e.target.dataset.k;if(k){store[k]=e.target.checked;save();const s=e.target.closest("section").id;s==="tasks"?drawRoles():drawCases()}});
+document.addEventListener("click",e=>{const t=e.target;
+if(t.dataset.r&&t.classList.contains("chip")){curRole=t.dataset.r;drawRoles()}
+if(t.dataset.c){curCase=t.dataset.c;drawCases()}
+if(t.dataset.reset){Object.keys(store).forEach(k=>{if(k.startsWith(t.dataset.reset+"-")||k.startsWith(t.dataset.reset))delete store[k]});save();drawRoles();drawCases()}
+if(t.dataset.go){curRole=t.dataset.go;drawRoles();show("tasks")}});
+$("#flowview").innerHTML=FLOW.map((s,i)=>`<div class="card step"><b>${s[0]}</b> <span class="tag">المرحلة ${i+1}</span><div>${s[1]}</div></div>`).join("")+`<div class="card step"><b>التتبع</b><div>كل تسليم أو تحويل قابل للتتبع: التاريخ، الجهة المستلمة، الوثائق المرفقة، ووضعية الملف.</div></div>`;
+$("#q").oninput=e=>{const v=e.target.value.trim(),out=$("#results");$("#roles").style.display=v?"none":"";
+if(!v){out.innerHTML="";return}let h="",n=0;
+ROLES.forEach(r=>r[2].forEach(t=>{if((t+r[1]).includes(v)&&n<30){n++;h+=`<div class="item" data-go="${r[0]}"><span data-go="${r[0]}"><b>${t}</b><br><small>${r[1]}</small></span></div>`}}));
+CASES.forEach(c=>c[2].forEach(g=>g[1].forEach(d=>{if(d.includes(v)&&n<30){n++;h+=`<div class="item"><span><b>${d}</b><br><small>ملف: ${c[1]}</small></span></div>`}})));
+out.innerHTML=h||'<div class="empty">لا توجد نتائج مطابقة.</div>'};
+drawRoles();drawCases();show(location.hash.slice(1)||"home");
+</script>
+</body>
+</html>
